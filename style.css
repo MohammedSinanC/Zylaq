@@ -35,6 +35,19 @@ a {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
+}
+
+main>section,
+.product-card,
+.info-item {
+    content-visibility: auto;
+}
+
+.shop,
+.brand-story,
+.info {
+    contain-intrinsic-size: 1px 720px;
 }
 
 .hero-shell {
@@ -49,7 +62,7 @@ img {
     left: 0;
     z-index: 4;
     width: 100%;
-    padding: 14px 18px;
+    padding: clamp(0.75rem, 2vw, 0.875rem) clamp(1rem, 3vw, 1.125rem);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.72), transparent);
     text-align: left;
 }
@@ -76,7 +89,7 @@ img {
 
 .offer-wrap {
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: clamp(0.4rem, 1vw, 0.5rem);
     text-align: center;
 }
 
@@ -85,8 +98,8 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 320px;
-    height: 120px;
+    width: clamp(14rem, 28vw, 20rem);
+    height: clamp(5.25rem, 10.5vw, 7.5rem);
 }
 
 .brand-logo img,
@@ -102,7 +115,7 @@ img {
     min-height: 100svh;
     display: grid;
     place-items: center;
-    padding: 190px 20px 122px;
+    padding: clamp(8.5rem, 16vw, 11.875rem) clamp(1rem, 3vw, 1.25rem) clamp(5.5rem, 10vw, 7.625rem);
     overflow: hidden;
     background: url("images/1__.png") center 34% / cover no-repeat;
 }
@@ -113,7 +126,7 @@ img {
 
 .hero-frame {
     position: absolute;
-    inset: 18px 18px 36px;
+    inset: clamp(0.75rem, 2vw, 1.125rem) clamp(0.75rem, 2vw, 1.125rem) clamp(1.25rem, 4vw, 2.25rem);
     border: 1px solid rgba(255, 255, 255, 0.22);
     pointer-events: none;
     z-index: 3;
@@ -123,35 +136,35 @@ img {
 .hero-frame::after {
     content: "";
     position: absolute;
-    width: 92px;
-    height: 1px;
+    width: clamp(3.5rem, 8vw, 5.75rem);
+    height: 0.0625rem;
     background: rgba(255, 255, 255, 0.6);
 }
 
 .hero-frame::before {
-    top: 22px;
-    left: 22px;
+    top: clamp(0.875rem, 2vw, 1.375rem);
+    left: clamp(0.875rem, 2vw, 1.375rem);
 }
 
 .hero-frame::after {
-    right: 22px;
-    bottom: 22px;
+    right: clamp(0.875rem, 2vw, 1.375rem);
+    bottom: clamp(0.875rem, 2vw, 1.375rem);
 }
 
 .hero-copy {
     position: relative;
     z-index: 2;
-    width: min(760px, 100%);
+    width: min(47.5rem, 100%);
     text-align: center;
-    margin-top: 24px;
+    margin-top: clamp(1rem, 3vw, 1.5rem);
 }
 
 .launch-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
-    padding: 9px 15px;
+    margin-bottom: clamp(0.875rem, 2vw, 1.125rem);
+    padding: clamp(0.5rem, 1.3vw, 0.5625rem) clamp(0.8rem, 2vw, 0.9375rem);
     border: 1px solid rgba(255, 255, 255, 0.32);
     border-radius: 999px;
     background: rgba(0, 0, 0, 0.46);
@@ -172,7 +185,7 @@ img {
 }
 
 .hero h1 {
-    margin-top: 12px;
+    margin-top: clamp(0.625rem, 2vw, 0.75rem);
     font-size: clamp(3.4rem, 10vw, 8rem);
     font-weight: 900;
     line-height: 0.88;
@@ -181,8 +194,8 @@ img {
 }
 
 .hero-copy p:last-of-type {
-    width: min(560px, 100%);
-    margin: 20px auto 0;
+    width: min(35rem, 100%);
+    margin: clamp(1rem, 3vw, 1.25rem) auto 0;
     color: var(--muted);
     font-size: clamp(1rem, 2vw, 1.2rem);
 }
@@ -190,9 +203,9 @@ img {
 .hero-actions {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: clamp(0.625rem, 2vw, 0.75rem);
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: clamp(1.5rem, 4vw, 1.875rem);
 }
 
 .primary-link,
@@ -209,14 +222,14 @@ img {
 }
 
 .primary-link {
-    padding: 15px 28px;
+    padding: clamp(0.8125rem, 2vw, 0.9375rem) clamp(1.3rem, 3vw, 1.75rem);
     border: 1px solid var(--accent);
     background: var(--accent);
     color: #000;
 }
 
 .secondary-link {
-    padding: 15px 24px;
+    padding: clamp(0.8125rem, 2vw, 0.9375rem) clamp(1.2rem, 3vw, 1.5rem);
     border: 1px solid rgba(255, 255, 255, 0.36);
     background: rgba(0, 0, 0, 0.42);
     color: var(--text);
@@ -237,11 +250,11 @@ img {
 .hero-meta {
     position: absolute;
     left: 50%;
-    bottom: 58px;
+    bottom: clamp(2rem, 5vw, 3.625rem);
     z-index: 4;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(860px, calc(100% - 72px));
+    width: min(53.75rem, calc(100% - clamp(2rem, 6vw, 4.5rem)));
     transform: translateX(-50%);
     border: 1px solid rgba(255, 255, 255, 0.16);
     background: rgba(0, 0, 0, 0.42);
@@ -249,7 +262,7 @@ img {
 }
 
 .hero-meta div {
-    padding: 16px 18px;
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(0.875rem, 2vw, 1.125rem);
     border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -265,7 +278,7 @@ img {
 
 .hero-meta span {
     display: block;
-    margin-top: 6px;
+    margin-top: clamp(0.3rem, 1vw, 0.375rem);
     color: var(--muted);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
@@ -273,15 +286,15 @@ img {
 }
 
 .section {
-    width: min(1180px, calc(100% - 32px));
+    width: min(73.75rem, calc(100% - clamp(2rem, 5vw, 3rem)));
     margin: 0 auto;
-    padding: 72px 0;
+    padding: clamp(3rem, 7vw, 4.5rem) 0;
 }
 
 .brand-story {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-    gap: 22px;
+    grid-template-columns: minmax(0, 1.2fr) minmax(min(100%, 17.5rem), 0.8fr);
+    gap: clamp(1rem, 3vw, 1.375rem);
     align-items: stretch;
 }
 
@@ -294,7 +307,7 @@ img {
 }
 
 .story-media {
-    min-height: 430px;
+    min-height: clamp(20rem, 42vw, 26.875rem);
     overflow: hidden;
 }
 
@@ -302,39 +315,46 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: var(--panel-soft);
 }
 
 .story-copy {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: clamp(28px, 5vw, 54px);
+    padding: clamp(1.75rem, 5vw, 3.375rem);
 }
 
 .story-copy h2,
 .section-heading h2 {
-    margin-top: 10px;
+    margin-top: clamp(0.5rem, 1.5vw, 0.625rem);
     font-size: clamp(2.3rem, 5vw, 4.4rem);
     font-weight: 900;
     line-height: 0.95;
     text-transform: uppercase;
 }
 
+.story-copy h2 {
+    max-width: 100%;
+    font-size: clamp(2rem, 5vw, 4.0625rem);
+    overflow-wrap: anywhere;
+}
+
 .story-copy p:last-child {
-    margin-top: 20px;
+    margin-top: clamp(1rem, 3vw, 1.25rem);
     color: var(--muted);
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 1.4vw, 1rem);
 }
 
 .section-heading {
-    margin-bottom: 26px;
+    margin-bottom: clamp(1.25rem, 3vw, 1.625rem);
     text-align: center;
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: clamp(1rem, 3vw, 1.375rem);
 }
 
 .product-card {
@@ -351,6 +371,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: var(--panel-soft);
     transition: transform 0.5s ease;
 }
 
@@ -362,8 +383,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
-    padding: 22px;
+    gap: clamp(0.875rem, 2vw, 1.125rem);
+    padding: clamp(1rem, 3vw, 1.375rem);
 }
 
 .product-details h3 {
@@ -373,18 +394,26 @@ img {
 }
 
 .product-details p {
-    margin-top: 6px;
+    margin-top: clamp(0.3rem, 1vw, 0.375rem);
     color: var(--muted);
+}
+
+.product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: clamp(0.5rem, 1.5vw, 0.625rem);
 }
 
 .shop-button {
     flex: 0 0 auto;
-    min-width: 136px;
-    padding: 13px 20px;
+    min-width: clamp(7.5rem, 18vw, 8.5rem);
+    padding: clamp(0.7rem, 2vw, 0.8125rem) clamp(1rem, 3vw, 1.25rem);
     border: 1px solid var(--accent);
     background: transparent;
     color: var(--accent);
     font-size: 0.82rem;
+    cursor: pointer;
 }
 
 .shop-button:hover {
@@ -392,10 +421,101 @@ img {
     color: #000;
 }
 
+.more-button {
+    font-family: inherit;
+}
+
+.product-gallery {
+    display: grid;
+    gap: clamp(0.75rem, 2vw, 0.875rem);
+    padding: 0 clamp(1rem, 3vw, 1.375rem) clamp(1.25rem, 3vw, 1.5rem);
+    animation: galleryReveal 0.28s ease;
+}
+
+.product-gallery[hidden] {
+    display: none;
+}
+
+.gallery-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(min(100%, 13.75rem), 1fr);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+}
+
+.gallery-feature img {
+    width: 100%;
+    height: 100%;
+    min-height: clamp(13.75rem, 30vw, 16.25rem);
+    object-fit: cover;
+    background: var(--panel-soft);
+}
+
+.gallery-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(1.375rem, 4vw, 2.125rem);
+}
+
+.gallery-copy span {
+    color: var(--muted);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.gallery-copy h4 {
+    margin-top: clamp(0.5rem, 1.5vw, 0.625rem);
+    font-size: clamp(1.45rem, 3vw, 2.2rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.gallery-copy p {
+    margin-top: clamp(0.625rem, 2vw, 0.75rem);
+    color: var(--muted);
+}
+
+.gallery-thumbs {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(0.5rem, 1.5vw, 0.625rem);
+}
+
+.gallery-thumbs img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: var(--panel-soft);
+    border: 1px solid var(--line);
+    transition: transform 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.gallery-thumbs img:hover {
+    border-color: var(--accent);
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+@keyframes galleryReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .info {
     display: grid;
     gap: 0;
-    padding-top: 32px;
+    padding-top: clamp(1.5rem, 4vw, 2rem);
 }
 
 .info-item {
@@ -410,8 +530,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    padding: 22px 0;
+    gap: clamp(1rem, 3vw, 1.25rem);
+    padding: clamp(1.125rem, 3vw, 1.375rem) 0;
     color: var(--text);
     font-size: clamp(1.05rem, 3vw, 1.6rem);
     text-transform: capitalize;
@@ -425,15 +545,15 @@ img {
 }
 
 .info-item summary:hover {
-    padding-left: 10px;
+    padding-left: clamp(0.4rem, 1.5vw, 0.625rem);
     color: var(--muted);
 }
 
 .plus {
     position: relative;
     flex: 0 0 auto;
-    width: 34px;
-    height: 34px;
+    width: clamp(1.9rem, 5vw, 2.125rem);
+    height: clamp(1.9rem, 5vw, 2.125rem);
     border: 1px solid var(--line);
     border-radius: 50%;
     transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
@@ -445,8 +565,8 @@ img {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 14px;
-    height: 2px;
+    width: clamp(0.75rem, 2vw, 0.875rem);
+    height: 0.125rem;
     background: var(--text);
     transform: translate(-50%, -50%);
     transition: transform 0.2s ease;
@@ -472,29 +592,29 @@ img {
 }
 
 .info-item p {
-    width: min(760px, 100%);
-    padding: 0 58px 24px 0;
+    width: min(47.5rem, 100%);
+    padding: 0 clamp(1.5rem, 6vw, 3.625rem) clamp(1.25rem, 3vw, 1.5rem) 0;
     color: var(--muted);
     font-size: clamp(0.95rem, 2vw, 1.08rem);
 }
 
 .site-footer {
-    padding: 48px 18px 34px;
+    padding: clamp(2.25rem, 6vw, 3rem) clamp(1rem, 3vw, 1.125rem) clamp(1.75rem, 5vw, 2.125rem);
     border-top: 1px solid var(--line);
     text-align: center;
 }
 
 .site-footer p {
-    margin-top: 10px;
+    margin-top: clamp(0.5rem, 1.5vw, 0.625rem);
     color: var(--muted);
     font-size: 0.9rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .site-header {
-        padding-top: 12px;
+        padding-top: clamp(0.625rem, 3vw, 0.75rem);
     }
 
     .header-inner {
@@ -502,13 +622,13 @@ img {
     }
 
     .offer-bar {
-        font-size: 0.72rem;
+        font-size: clamp(0.68rem, 2.8vw, 0.72rem);
     }
 
     .brand-logo,
     .footer-logo {
-        width: 230px;
-        height: 86px;
+        width: clamp(11.5rem, 50vw, 14.375rem);
+        height: clamp(4.3rem, 18vw, 5.375rem);
     }
 
     .brand-logo img,
@@ -518,7 +638,7 @@ img {
 
     .hero {
         min-height: 100svh;
-        padding: 142px 18px 28px;
+        padding: clamp(7.25rem, 22vw, 8.875rem) clamp(1rem, 4vw, 1.125rem) clamp(1.5rem, 6vw, 1.75rem);
         place-items: end center;
         background-position: center 22%;
     }
@@ -528,7 +648,7 @@ img {
     }
 
     .hero-frame {
-        inset: 12px 12px 18px;
+        inset: clamp(0.625rem, 3vw, 0.75rem) clamp(0.625rem, 3vw, 0.75rem) clamp(0.875rem, 4vw, 1.125rem);
     }
 
     .hero-actions {
@@ -546,12 +666,12 @@ img {
         bottom: auto;
         grid-template-columns: 1fr;
         width: 100%;
-        margin-top: 22px;
+        margin-top: clamp(1rem, 4vw, 1.375rem);
         transform: none;
     }
 
     .hero-meta div {
-        padding: 12px 14px;
+        padding: clamp(0.625rem, 3vw, 0.75rem) clamp(0.75rem, 3vw, 0.875rem);
         border-right: 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
@@ -566,7 +686,7 @@ img {
     }
 
     .story-media {
-        min-height: 330px;
+        min-height: clamp(17.5rem, 58vw, 20.625rem);
     }
 
     .product-details {
@@ -574,7 +694,70 @@ img {
         flex-direction: column;
     }
 
+    .product-actions,
     .shop-button {
         width: 100%;
+    }
+
+    .gallery-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-feature img {
+        min-height: clamp(12.5rem, 52vw, 13.75rem);
+    }
+
+    .gallery-thumbs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        width: min(100%, calc(100% - 1.5rem));
+        padding: clamp(2.25rem, 10vw, 3rem) 0;
+    }
+
+    .hero {
+        padding-right: 0.875rem;
+        padding-left: 0.875rem;
+    }
+
+    .offer-bar {
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+
+    .hero-meta {
+        width: 100%;
+    }
+
+    .story-copy {
+        padding: clamp(1.25rem, 7vw, 1.75rem);
+    }
+
+    .story-copy h2,
+    .section-heading h2 {
+        font-size: clamp(1.85rem, 11vw, 2.6rem);
+    }
+
+    .product-details {
+        padding: clamp(0.875rem, 5vw, 1rem);
+    }
+
+    .product-gallery {
+        padding: 0 clamp(0.875rem, 5vw, 1rem) clamp(1rem, 5vw, 1.25rem);
+    }
+
+    .gallery-copy {
+        padding: clamp(1rem, 6vw, 1.375rem);
+    }
+
+    .gallery-thumbs {
+        grid-template-columns: 1fr;
+    }
+
+    .info-item p {
+        padding-right: 0;
     }
 }
