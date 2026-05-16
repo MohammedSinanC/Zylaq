@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ZYLAQ - India's own sportswear brand.">
     <title>ZYLAQ | India's Own Sportswear Brand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,11 +18,10 @@
         <div class="col-md-12 col-xl-12 col-lg-12 d-flex" style=" justify-content: center;display: flex;">
             <p class="offer-bar justify-content-center">Launch offer 20% discount</p>
         </div>
-        <div class="header-inner">
+        <div class="header-inner reveal-down">
             <a href="#home" class="brand-logo" aria-label="ZYLAQ home">
                 <img src="images/icon/Zylaq White  (1).png" alt="ZYLAQ" decoding="async" fetchpriority="high">
             </a>
-
         </div>
     </header>
 
@@ -27,38 +29,39 @@
         <section class="hero" id="home" aria-label="Made to move">
             <!-- <div class="hero-frame" aria-hidden="true"></div> -->
             <div class="hero-copy">
-                <!-- <span class="launch-pill">Launch Offer - 20% Off</span> -->
-                <!-- <p class="eyebrow">ZYLAQ</p> -->
-                <!-- <h1>Made to Move</h1> -->
-                <p>Performance staples shaped for training, travel, and everyday motion.</p>
-                <div class="hero-actions">
-                    <a class="primary-link" href="#shop">Shop ZYLAQ</a>
-                    <!-- <a class="secondary-link" href="#story">Explore Brand</a> -->
+                <h1 class="reveal-up" style="transition-delay: 0.1s;">MADE TO MOVE</h1>
+                <p class="reveal-up" style="transition-delay: 0.3s;">Performance staples shaped for training, travel,
+                    and everyday motion.</p>
+                <div class="hero-actions reveal-up" style="transition-delay: 0.5s;">
+                    <a class="primary-link magnetic" href="#shop">Shop ZYLAQ</a>
                 </div>
             </div>
-            <div class="hero-meta" aria-label="ZYLAQ highlights">
-                <div>
+            <div class="hero-meta reveal-up" aria-label="ZYLAQ highlights" style="transition-delay: 0.7s;">
+                <div class="meta-item">
                     <strong>01</strong>
                     <span>India-first sportswear</span>
                 </div>
-                <div>
+                <div class="meta-item">
                     <strong>20%</strong>
                     <span>Launch discount</span>
                 </div>
-                <div>
+                <div class="meta-item">
                     <strong>24/7</strong>
                     <span>Built for motion</span>
                 </div>
             </div>
+            <div class="scroll-indicator reveal-up" style="transition-delay: 1s;">
+                <div class="mouse"></div>
+            </div>
         </section>
         <section class="shop section" id="shop">
-            <div class="section-heading">
-                <p class="eyebrow">Shop ZYLAQ</p>
+            <div class="section-heading reveal-up">
+                <p class="eyebrow1">Shop ZYLAQ</p>
                 <h2>New Essentials</h2>
             </div>
 
             <div class="product-grid">
-                <article class="product-card">
+                <article class="product-card reveal-up">
                     <div class="product-image">
                         <img src="webp/PF2_2704-small.webp" alt="ZYLAQ t-shirt" loading="lazy" decoding="async">
                     </div>
@@ -68,15 +71,16 @@
                             <p>Training fit</p>
                         </div>
                         <div class="product-actions">
-                            <a class="shop-button"
-                                href="https://api.whatsapp.com/send?phone=918547930708&text=Hi%20ZYLAQ%2C%20I%20want%20to%20order%20the%20T%20Shirt."
+                            <a class="shop-button magnetic"
+                                href="https://api.whatsapp.com/send?phone=918547930708&text=Hi%20ZYLAQ%2C%20I%20want%20to%20order%20this%20product.%0A%0AProduct%3A%20T%20Shirt%0ADetails%3A%20Training%20fit"
                                 target="_blank" rel="noopener">Shop Now</a>
-                            <button class="shop-button more-button" type="button" data-gallery-toggle="tshirt-gallery">
+                            <button class="shop-button more-button magnetic" type="button"
+                                data-gallery-toggle="tshirt-gallery">
                                 More About
                             </button>
                         </div>
                     </div>
-                    <div class="product-gallery" id="tshirt-gallery" hidden>
+                    <div class="product-gallery gallery-hidden" id="tshirt-gallery1" hidden>
                         <div class="gallery-feature">
                             <img data-src="webp/PF2_2704-small.webp" alt="ZYLAQ t-shirt featured view" loading="lazy"
                                 decoding="async">
@@ -111,7 +115,7 @@
                     </div>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card reveal-up" style="transition-delay: 0.1s;">
                     <div class="product-image">
                         <img src="webp/PF2_2870-small.webp" alt="ZYLAQ track wear" loading="lazy" decoding="async">
                     </div>
@@ -121,15 +125,16 @@
                             <p>Move-ready comfort</p>
                         </div>
                         <div class="product-actions">
-                            <a class="shop-button"
-                                href="https://api.whatsapp.com/send?phone=918547930708&text=Hi%20ZYLAQ%2C%20I%20want%20to%20order%20the%20T%20Shirt."
+                            <a class="shop-button magnetic"
+                                href="https://api.whatsapp.com/send?phone=918547930708&text=Hi%20ZYLAQ%2C%20I%20want%20to%20order%20this%20product.%0A%0AProduct%3A%20Track%0ADetails%3A%20Move-ready%20comfort"
                                 target="_blank" rel="noopener">Shop Now</a>
-                            <button class="shop-button more-button" type="button" data-gallery-toggle="track-gallery">
+                            <button class="shop-button more-button magnetic" type="button"
+                                data-gallery-toggle="track-gallery1">
                                 More About
                             </button>
                         </div>
                     </div>
-                    <div class="product-gallery" id="track-gallery" hidden>
+                    <div class="product-gallery gallery-hidden" id="track-gallery2" hidden>
                         <div class="gallery-feature">
                             <img data-src="webp/PF2_2870-small.webp" alt="ZYLAQ track featured view" loading="lazy"
                                 decoding="async">
@@ -167,12 +172,12 @@
         </section>
 
         <section class="brand-story section" id="story">
-            <div class="story-media">
+            <div class="story-media reveal-left">
                 <img src="images/PF2_3222-optimized.jpg" alt="ZYLAQ sportswear campaign" loading="lazy"
                     decoding="async">
             </div>
-            <div class="story-copy">
-                <p class="eyebrow">Built for the daily grind.</p>
+            <div class="story-copy reveal-right">
+                <p class="eyebrow2">Built for the daily grind.</p>
                 <h2>Indian's Own Sportswear Brand</h2>
                 <p>Clean fits, durable fabrics, and athletic silhouettes made for people who keep moving.</p>
             </div>
@@ -233,24 +238,148 @@
         </a>
         <p>ZYLAQ. Made to move.</p>
     </footer>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
     <script>
-        document.querySelectorAll("[data-gallery-toggle]").forEach((button) => {
-            button.addEventListener("click", () => {
-                const gallery = document.getElementById(button.dataset.galleryToggle);
+        // Gallery Toggle and Interaction
+        const toggleButtons = document.querySelectorAll("[data-gallery-toggle]");
+        const productImages = document.querySelectorAll(".product-image");
 
-                if (!gallery) {
-                    return;
-                }
+        const toggleGallery = (targetId, sourceButton) => {
+            const targetGallery = document.getElementById(targetId);
+            if (!targetGallery) return;
 
-                if (gallery.hidden) {
-                    gallery.querySelectorAll("img[data-src]").forEach((image) => {
-                        image.src = image.dataset.src;
-                        image.removeAttribute("data-src");
+            const isCurrentlyHidden = targetGallery.classList.contains("gallery-hidden");
+
+            if (isCurrentlyHidden) {
+                // Close ALL other galleries first
+                document.querySelectorAll(".product-gallery").forEach((g) => {
+                    g.classList.add("gallery-hidden");
+                    const relatedBtn = document.querySelector(`[data-gallery-toggle="${g.id}"]`);
+                    if (relatedBtn) relatedBtn.textContent = "More About";
+                });
+
+                // Open target gallery
+                targetGallery.classList.remove("gallery-hidden");
+                const btn = document.querySelector(`[data-gallery-toggle="${targetId}"]`);
+                if (btn) btn.textContent = "Show Less";
+
+                // Load images
+                targetGallery.querySelectorAll("img[data-src]").forEach((img) => {
+                    img.src = img.getAttribute("data-src");
+                });
+
+                // Initialize thumbnails
+                if (!targetGallery.dataset.initialized) {
+                    const featuredImg = targetGallery.querySelector('.gallery-feature img');
+                    const thumbs = targetGallery.querySelectorAll('.gallery-thumbs img');
+                    if (thumbs.length > 0) thumbs[0].classList.add('active-thumb');
+                    thumbs.forEach(thumb => {
+                        thumb.addEventListener('click', () => {
+                            if (thumb.classList.contains('active-thumb')) return;
+                            featuredImg.style.opacity = '0';
+                            setTimeout(() => {
+                                featuredImg.src = thumb.src;
+                                featuredImg.style.opacity = '1';
+                            }, 200);
+                            thumbs.forEach(t => t.classList.remove('active-thumb'));
+                            thumb.classList.add('active-thumb');
+                        });
                     });
+                    targetGallery.dataset.initialized = "true";
                 }
+                targetGallery.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else if (sourceButton) {
+                // Only allow closing if the button was clicked (not the image)
+                targetGallery.classList.add("gallery-hidden");
+                sourceButton.textContent = "More About";
+                sourceButton.closest('.product-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        };
 
-                gallery.hidden = !gallery.hidden;
-                button.textContent = gallery.hidden ? "More About" : "Show Less";
+        toggleButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                toggleGallery(button.getAttribute("data-gallery-toggle"), button);
+            });
+        });
+
+        productImages.forEach((imgDiv) => {
+            imgDiv.style.cursor = 'pointer';
+            imgDiv.addEventListener("click", () => {
+                const gallery = imgDiv.closest('.product-card').querySelector('.product-gallery');
+                if (gallery) toggleGallery(gallery.id, null);
+            });
+        });
+
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-up, .reveal-down, .reveal-left, .reveal-right').forEach((el) => observer.observe(el));
+
+        // Trigger hero animations immediately
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.hero .reveal-up, .hero .reveal-down, .site-header .reveal-down').forEach(el => {
+                el.classList.add('active');
+            });
+        });
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const follower = document.querySelector('.cursor-follower');
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+        });
+
+        const lerp = (start, end, amt) => (1 - amt) * start + amt * end;
+
+        function animate() {
+            followerX = lerp(followerX, mouseX, 0.1);
+            followerY = lerp(followerY, mouseY, 0.1);
+            follower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Hover states for cursor
+        document.querySelectorAll('a, button, .product-card, .info-item summary').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                follower.classList.add('active');
+                cursor.classList.add('active');
+            });
+            el.addEventListener('mouseleave', () => {
+                follower.classList.remove('active');
+                cursor.classList.remove('active');
+            });
+        });
+
+        // Magnetic Effect
+        document.querySelectorAll('.magnetic').forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = `translate(0, 0)`;
             });
         });
     </script>
